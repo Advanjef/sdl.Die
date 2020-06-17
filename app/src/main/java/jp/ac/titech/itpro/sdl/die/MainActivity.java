@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     private Cube cube;
     private Pyramid pyramid;
+    private Ruby ruby;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         renderer = new SimpleRenderer();
         cube = new Cube();
         pyramid = new Pyramid();
+        ruby = new Ruby();
         renderer.setObj(cube);
         glView.setRenderer(renderer);
     }
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
             break;
         case R.id.menu_pyramid:
             renderer.setObj(pyramid);
+            break;
+        case R.id.menu_ruby:
+            renderer.setObj(ruby);
             break;
         }
         return true;
